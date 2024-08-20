@@ -16,7 +16,7 @@ public class TodoController {
     @Autowired
     private TodoService todoService;
 
-
+    //Get
     @GetMapping
     public ResponseEntity getAll(){
         try {
@@ -27,6 +27,7 @@ public class TodoController {
         }
     }
 
+    //Post
     @PostMapping
     public ResponseEntity createTodo(@RequestBody TodoEntity todoEntity, @RequestParam Long user_id){
         try {
